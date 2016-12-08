@@ -17,7 +17,7 @@ You will need a system running python2 or python3.
 Download the version used for importing:
 
 ```
-curl -O https://raw.githubusercontent.com/ChilliNerd/PyDB/master/demo/pydb.py
+curl -O https://raw.githubusercontent.com/ChilliNerd/PyDB/master/demos/pydb.py
 ```
 
 ## Usage
