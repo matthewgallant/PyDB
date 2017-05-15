@@ -44,7 +44,7 @@ Add Row:
 pydb.addrow("your database name","your column name","your row name","your row data")
 ```
 
-Add Row:
+Read Row:
 ```
 pydb.read("your database name","your column name","your row name")
 ```
