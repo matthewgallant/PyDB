@@ -46,7 +46,17 @@ pydb.addrow("your database name","your column name","your row name","your row da
 
 Read Row:
 ```
-pydb.read("your database name","your column name","your row name")
+pydb.readrow("your database name","your column name","your row name")
+```
+
+List Columns:
+```
+pydb.listcolumns("your database name")
+```
+
+List Rows:
+```
+pydb.listrows("your database name","your column name")
 ```
 
 ## Demos

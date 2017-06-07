@@ -1,7 +1,7 @@
 #
-# PyDB Version 1.0
+# PyDB Version 1.1
 #
-# (c) 2016 Matt Gallant
+# (c) 2017 Matt Gallant
 #
 
 import sys
@@ -39,7 +39,7 @@ def addrow(x,y,z,w):
             add_row.write(z + " " + w + "\n")
             add_row.close()
 
-def read(x,y,z):
+def readrow(x,y,z):
         parse_file = open(x + "/" + y + ".db")
         parsed_file = parse_file.read()
         for line in parsed_file.splitlines():
@@ -47,3 +47,25 @@ def read(x,y,z):
                 len_size = len(z)
                 line_var = line[len_size+1:]
                 return(line_var)
+
+def listcolumns(x):
+        return(os.listdir(x + "/"))
+
+def listrows(x,y):
+        d = []
+        parse_file = open(x + "/" + y + ".db")
+        parsed_file = parse_file.read()
+        for line in parsed_file.splitlines():
+            row, data = line.split(" ")
+            d.append(row)
+        return(d)
+
+def rmrow(x,y,z):
+        rm_file = open(x + "/" + y + ".db", "r")
+        rm_file_line = rm_file.readlines()
+        rm_file.close()
+        rm_file = open(x + "/" + y + ".db","w")
+        for line in rm_file_line:
+            if line!=z+"\n":
+                rm_file.write(line)
+        rm_file.close()
