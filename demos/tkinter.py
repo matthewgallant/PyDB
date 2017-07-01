@@ -15,7 +15,7 @@ pydb.create("gui")
 
 pydb.addcolumn("gui","labels")
 
-label_text = pydb.read("gui","labels","label1")
+label_text = pydb.readrow("gui","labels","label1")
 
 root = tk.Tk()
 root.title("PyDB GUI Demo")

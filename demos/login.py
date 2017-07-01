@@ -43,8 +43,8 @@ if mode == "login":
     password = input("Password: ")
 
     # Get Data
-    user = pydb.read("login","usernames",username)
-    passwd = pydb.read("login","passwords",username)
+    user = pydb.readrow("login","usernames",username)
+    passwd = pydb.readrow("login","passwords",username)
 
     if user == username:
         tok += 1
