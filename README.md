@@ -17,7 +17,7 @@ You will need a system running python2 or python3.
 Download the library:
 
 ```
-curl -O https://raw.githubusercontent.com/ChilliNerd/PyDB/master/PyDB.py
+curl -O https://raw.githubusercontent.com/MatthewGallant/PyDB/master/PyDB.py
 ```
 
 ## Usage
