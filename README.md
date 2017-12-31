@@ -1,8 +1,8 @@
 # PyDB
 
-A simple way to locally database variables for python programs.
+A simple way to store persistent data in Python.
 
-PyDB allows you to save variables that you can call in your code. This is useful because everytime you restart your program, all of your variables are unset, but with PyDB, you can save these forever.
+PyDB allows you to save variables that you can call in your code. This is useful because everytime you restart your program, all of your variables are unset, but with PyDB, you can save these forever. Plus, it's only 32 lines long (only 20 if you remove comments and spacing)!
 
 ## Getting Started
 
@@ -14,58 +14,46 @@ You will need a system running python2 or python3.
 
 ### Installing
 
-Download the version used for importing:
+Download the library:
 
 ```
-curl -O https://raw.githubusercontent.com/ChilliNerd/PyDB/master/demos/pydb.py
+curl -O https://raw.githubusercontent.com/ChilliNerd/PyDB/master/PyDB.py
 ```
 
 ## Usage
 
-There is up to 4 variables you will need to use in a command: The database name, the column name, the row name and the row data.
-
-First you need to add the pydb.py to the root of your python script's directory, then we need to import it in our code:
+First you need to add the PyDB.py to the root of your python script's directory, then we need to import it in our code:
 ```
-import pydb
+import PyDB as db
 ```
 
-Create Database:
+Create Dataset:
 ```
-pydb.create("your database name")
-```
-
-Add Column:
-```
-pydb.addcolumn("your database name","your column name")
+db.set("test", "This is a test!")
 ```
 
-Add Row:
+Read Dataset:
 ```
-pydb.addrow("your database name","your column name","your row name","your row data")
-```
-
-Read Row:
-```
-pydb.readrow("your database name","your column name","your row name")
+data = db.get("test")
 ```
 
-List Columns:
+Delete Dataset:
 ```
-pydb.listcolumns("your database name")
+db.unset("test")
 ```
 
-List Rows:
+List Datasets:
 ```
-pydb.listrows("your database name","your column name")
+datasets = db.list()
 ```
 
 ## Demos
 
-There is demos avaiable in the demos folder. demo.py prints a variable, login.py is a simple login and create form and gui.py is a tkinter script that saves textfield input.
+There is a demo showcasing a bit of code in the demo.py file.
 
 ## Authors
 
-* **Matt Gallant** - *Initial Work* - [Website](http://chillinerd.github.io)
+* **Matt Gallant** - *Initial Work* - [Website](http://matthewgallant.me)
 
 ## License
 
